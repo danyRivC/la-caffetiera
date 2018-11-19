@@ -49,7 +49,7 @@
             <li class="nav-item {% if request.path == '/contact/' %}active{% endif %} px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'contact' %}">Contacto</a>
             </li>
-            <li class="nav-item {% if request.path == '/blog/' %}active{% endif %} px-lg-4">
+            <li class="nav-item {% if request.path|slice:":6" == '/blog/' %}active{% endif %} px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'blog' %}">Blog</a>
             </li>
           </ul>
@@ -69,25 +69,11 @@
     <footer class="footer text-faded text-center py-5">
       <div class="container">
         <p class="m-0">
-	        <a href="#" class="link">
-	          <span class="fa-stack fa-lg">
-	            <i class="fa fa-circle fa-stack-2x"></i>
-	            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-	          </span>
-	        </a>
-	        <a href="#" class="link">
-	          <span class="fa-stack fa-lg">
-	            <i class="fa fa-circle fa-stack-2x"></i>
-	            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-	          </span>
-	        </a>
-	        <a href="#" class="link">
-	          <span class="fa-stack fa-lg">
-	            <i class="fa fa-circle fa-stack-2x"></i>
-	            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-	          </span>
-	        </a>
-	    </p>
+
+            {% include 'social/links.html' %}
+
+
+
         <p class="m-0 mbt">
         	<a href="sample.html" class="link">Política de privacidad</a> ·
         	<a href="sample.html" class="link">Aviso legal</a> ·
