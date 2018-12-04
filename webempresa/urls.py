@@ -13,10 +13,16 @@ from django.conf import settings
 
 
 urlpatterns = [
+    #Path del admin
     path('admin/', admin.site.urls),
+    #Path del core
     path('', include('core.urls')),
+    #Path de los servicios
     path('services/', include('services.urls')),
+    #Path del blog
     path('blog/', include('blog.urls')),
+    #Path de las paginas de politicas
+    path('page/', include('pages.urls')),
 
 ]
 

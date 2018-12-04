@@ -16,5 +16,4 @@ def contact(request):
     return render(request, "core/contact.html")
 
 
-def sample(request):
-    return HttpResponse('Sample')
+
