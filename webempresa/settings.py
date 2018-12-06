@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'services',
     'social.apps.SocialConfig',
     'pages.apps.PagesConfig',
+    'ckeditor',
+    'contact.apps.ContactConfig',
 ]
 
 MIDDLEWARE = [
@@ -133,3 +135,10 @@ STATICFILES_FINDERS=[
     ]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+#CKEditor
+CKEDITOR_CONFIGS={
+    'default':{
+        'toolbar': None
+    }
+}
