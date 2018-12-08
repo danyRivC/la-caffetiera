@@ -17,6 +17,7 @@
 {% endblock %}
 {% block content %}
                 <!-- Formulario de contacto -->
+    <!--
                 <form>
                     <div class="form-group">
                         <label>Nombre *</label>
@@ -44,7 +45,13 @@
                     </div>
                 </form>
                 <!-- Fin formulario de contacto -->
-
+                <form action="" method="POST">
+                {% csrf_token %}
+                    <table>
+                        {{ contact.as_table}}
+                    </table>
+                    <input type="submit" value="Enviar">
+                </form>
               </div>
             </div>
           </div>

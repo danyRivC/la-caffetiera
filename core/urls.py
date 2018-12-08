@@ -5,8 +5,5 @@ urlpatterns = [
     path('about/', views_core.about, name='about'),
 
     path('store/', views_core.store, name='store'),
-    path('contact/', views_core.contact, name='contact'),
-
-
 
 ]
